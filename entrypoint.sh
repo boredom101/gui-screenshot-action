@@ -1,15 +1,13 @@
 #!/bin/sh -l
 
-Xvfb :99 -screen 0 $1 &
-export DISPLAY=:99
-
 cd $GITHUB_WORKSPACE
 
-ls
+Xvfb :99 −fbdir ../xvfb -screen 0 $1 &
+export DISPLAY=:99
 
 chmod +x $4
 $4 &
 
 sleep $3
 
-xwd -root -silent -screen | convert xwd:- png:$2
+convert xwd:../xvfb/Xvfb_screen0 png:$2
