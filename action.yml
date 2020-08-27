@@ -1,0 +1,23 @@
+name: 'GUI Screenshot'
+author: 'Boredom101'
+description: 'Takes a screenshot of a graphical program'
+inputs:
+  resolution:
+    description: 'Resolution of screen in WxHxD format'
+    required: true
+  path:
+    description: 'Path to save image at'
+    required: true
+  sleep:
+    description: 'How long the program needs to get to the desired state'
+    required: true
+  program:
+    description: 'A path to the program to run'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.resolution }}
+    - ${{ inputs.path }}
+    - ${{ inputs.sleep }}
+    - ${{ inputs.program }}
