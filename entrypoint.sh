@@ -1,6 +1,7 @@
 #!/bin/sh -l
 
 cd $GITHUB_WORKSPACE
+mkdir ../xvfb
 
 Xvfb :99 −fbdir ../xvfb -screen 0 $1 &
 export DISPLAY=:99
