@@ -6,7 +6,6 @@ mkdir ../xvfb
 Xvfb :99 -fbdir ../xvfb -screen 0 $1 &
 export DISPLAY=:99
 
-chmod +x $4
 $4 &
 
 sleep $3
