@@ -3,6 +3,7 @@
 Xvfb :99 -screen 0 $1 &
 export DISPLAY=:99
 
+cd $GITHUB_WORKSPACE
 chmod +x $4
 $4 &
 
