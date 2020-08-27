@@ -8,7 +8,7 @@ cd $GITHUB_WORKSPACE
 ls
 
 chmod +x $4
-$4 &
+./$4 &
 
 sleep $3
 
