@@ -12,4 +12,4 @@ $4 &
 
 sleep $3
 
-xwd -root -silent | convert xwd:- png:$2
+xwd -root -silent -screen | convert xwd:- png:$2
