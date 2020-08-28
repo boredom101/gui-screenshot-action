@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-RUN apt-get update && apt-get install -y xvfb imagemagick mesa-utils
+RUN apt-get update && apt-get install -y xvfb imagemagick mesa-utils llvm-10-dev
 
 COPY mesa.tar.gz /mesa.tar.gz
 
