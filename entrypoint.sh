@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 tar -zxf /mesa.tar.gz
-export LD_LIBRARY_PATH=/mesa/usr/local/lib/x86_64-linux-gnu
+export LD_LIBRARY_PATH=/mesa/local/lib/x86_64-linux-gnu
 export GALLIUM_DRIVER=swr
 
 cd $GITHUB_WORKSPACE
